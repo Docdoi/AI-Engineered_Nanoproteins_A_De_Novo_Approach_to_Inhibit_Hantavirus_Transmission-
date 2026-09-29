@@ -10,7 +10,6 @@ The target protein structure (PDB ID: 6Y5W) was analyzed to identify binding hot
 The resulting candidates were evaluated using AlphaFold2 and Rosetta through multiple structural and interface metrics, including binder pLDDT, ipTM, interface PAE, RF-to-AF2 RMSD, Rosetta ΔG, Packstat, and unsatisfied hydrogen bonds. Although individual designs showed favorable performance in specific metrics, no candidate performed consistently well across all validation criteria. In particular, the low AlphaFold2 interface confidence observed across the designs indicates that further optimization is required before experimental validation.
 
 ## Workflow
-
 <p align="center">
   <img src="figures/workflow.png" width="850">
 </p>
@@ -66,6 +65,12 @@ Protein–protein interfaces were further assessed using:
 - Unsatisfied hydrogen bonds
 
 ## Results
+
+### Structural Validation
+
+<p align="center">
+  <img src="figures/binder_structures.png" width="800">
+</p>
 
 | Design | Binder pLDDT ↑ | ipTM ↑ | Interface PAE ↓ (Å) | RF→AF2 RMSD ↓ (Å) | Rosetta ΔG ↓ (REU) | Packstat ↑ | Unsat H-bonds ↓ |
 |---|---:|---:|---:|---:|---:|---:|---:|
