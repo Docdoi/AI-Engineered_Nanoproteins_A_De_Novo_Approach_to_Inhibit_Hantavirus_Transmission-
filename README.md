@@ -13,9 +13,7 @@ The resulting candidates were evaluated using AlphaFold2 and Rosetta through mul
 <p align="center">
   <img src="figures/workflow.png" width="850">
 </p>
-
 The computational pipeline consists of three major stages:
-
 1. **Backbone generation — RFdiffusion**
 2. **Sequence design — ProteinMPNN**
 3. **Structural and interface validation — AlphaFold2 & Rosetta**
@@ -67,11 +65,9 @@ Protein–protein interfaces were further assessed using:
 ## Results
 
 ### Structural Validation
-
 <p align="center">
   <img src="figures/binder_structures.png" width="800">
 </p>
-
 | Design | Binder pLDDT ↑ | ipTM ↑ | Interface PAE ↓ (Å) | RF→AF2 RMSD ↓ (Å) | Rosetta ΔG ↓ (REU) | Packstat ↑ | Unsat H-bonds ↓ |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Design 0 | 40.62 | **0.12** | 26.28 | **4.13** | **-55.71** | 0.565 | 15 |
@@ -89,6 +85,17 @@ Protein–protein interfaces were further assessed using:
 - Binder pLDDT and ipTM remained low across all candidates.
 - Interface PAE remained high across all candidates.
 - No design performed consistently well across all evaluation metrics.
+
+## Limitations
+
+Although several candidates showed favorable performance in individual
+metrics, none performed consistently well across all validation criteria.
+
+In particular, the relatively low binder pLDDT and ipTM values and high
+interface PAE indicate limited confidence in the predicted binder–target
+interfaces. Further rounds of backbone generation, sequence optimization,
+and computational validation are therefore required before experimental
+testing.
 
 These results suggest that additional optimization and redesign are
 required before proceeding to experimental validation.
